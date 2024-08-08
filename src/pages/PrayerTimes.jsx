@@ -221,39 +221,39 @@ const PrayerTimes = () => {
     <div className="min-h-screen pt-[80px] overflow-hidden mx-[20px]">
       {/* part One */}
       <div className="flex flex-col justify-center">
-        <h2 className="mb-[30px] text-center text-[40px] font-[700]">
+        <h2 className="mb-[30px] text-center text-white text-[40px] font-[700]">
           {t("prayer-times")}
         </h2>
 
         {loading ? (
-          <div className="flex items-center justify-center h-screen mx-auto">
+          <div className="flex text-white items-center justify-center h-screen mx-auto">
             <PuffLoader color="#38bdf8" size={100} speedMultiplier={3} />
           </div>
         ) : (
           <div className="flex justify-around font-[600] text-[18px] mb-[20px]">
             {/* city - day */}
             <div className="">
-              <h2 className="mb-[15px]">{city}</h2>
-              <h2>
+              <h2 className="mb-[15px] text-white">{city}</h2>
+              <h2 className="text-white">
                 {currentLanguage === "en"
                   ? data?.[day]?.date?.gregorian?.weekday.en
                   : data?.[day]?.date?.hijri?.weekday.ar}
               </h2>
             </div>
             {/* date */}
-            <div className="">
-              <h2 className="mb-[15px]">
+            <div className="text-white">
+              <h2 className="mb-[15px] text-white">
                 {currentLanguage === "en" ? (
                   data?.[day]?.date?.readable
                 ) : (
-                  <div className="flex gap-1">
+                  <div className="flex gap-1 text-white">
                     <span>{data?.[day]?.date?.gregorian?.day}</span>
                     <span>{monthsArabic[month - 1]}</span>
                     <span>{year}</span>
                   </div>
                 )}
               </h2>
-              <h2 className="flex gap-1">
+              <h2 className="flex gap-1 text-white">
                 <span>{data?.[day]?.date?.hijri?.day}</span>
                 <span>
                   {currentLanguage === "en"
@@ -275,14 +275,14 @@ const PrayerTimes = () => {
 
         {/* timeRemaining */}
         {currentTime && (
-          <h1 className="flex items-center gap-[12px] w-fit mx-auto font-[800] mt-[10px] bg-green-400 rounded-[6px] px-[30px] py-[8px]">
+          <h1 className="flex text-white items-center gap-[12px] w-fit mx-auto font-[800] mt-[10px] bg-green-400 rounded-[6px] px-[30px] py-[8px]">
             <AiTwotoneClockCircle />
             {t("Current-Time")} {convertTimeFormat(currentTime)}
           </h1>
         )}
         {nextPrayer && remainingTime ? (
-          <div className="text-center my-[20px] select-none">
-            <p className="mb-[15px] text-[20px] font-[600] animate-pulse">
+          <div className="text-center text-white my-[20px] select-none">
+            <p className="mb-[15px] text-white text-[20px] font-[600] animate-pulse">
               {t("next-prayer")}
               <span>{t(nextPrayer)}</span>
             </p>
@@ -329,7 +329,7 @@ const PrayerTimes = () => {
         </div>
         <div className="flex-1">
           <button
-            className="bg-green-400 text-[18px] font-[600] rounded-[6px] px-[20px] py-[5px] w-full h-full"
+            className="bg-green-400 text-white text-[18px] font-[600] rounded-[6px] px-[20px] py-[5px] w-full h-full"
             onClick={() => changePath("/location")}
           >
             {t("Choose-the-location-manually")}
