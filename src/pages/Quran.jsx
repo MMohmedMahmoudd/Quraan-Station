@@ -39,7 +39,7 @@ const Quran = () => {
   return (
     <div className="pt-[100px]">
       <div className="max-w-[700px] md:mx-auto mx-3 mb-[30px]">
-        <p>{t("The-prophet-said")}</p>
+        <p className="text-white">{t("The-prophet-said")}</p>
         <div
           className={`${
             currentLanguage === "en" && "flex-row-reverse"
@@ -47,27 +47,27 @@ const Quran = () => {
         >
           <FaQuoteRight
             size={20}
-            color="#004445"
+            color="#fff"
             className={`${currentLanguage == "en" ? "self-end" : "self-start"}`}
           />
-          <p className="text-primary text-[25px] font-[600] mx-[10px] text-center">
+          <p className="text-white text-[25px] font-[600] mx-[10px] text-center">
             {t("Read-the-Quran")}
           </p>
 
           <FaQuoteLeft
             size={20}
-            color="#004445"
+            color="#fff"
             className={`${currentLanguage == "en" ? "self-start" : "self-end"}`}
           />
         </div>
-        <p className="text-end">{t("The-narrated")}</p>
+        <p className="text-end ">{t("The-narrated")}</p>
       </div>
       <ul className="grid justify-center grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
         {data?.map((surah) => (
           <li
             key={surah.number}
             onClick={() => changePath(surah.number)}
-            className="group hover:border-primary border-solid border-secondary text-secondary border-[1px] font-[600] p-[10px] m-[10px] flex items-center justify-between gap-[20px] rounded-[6px] cursor-pointer"
+            className="group hover:border-primary border-solid border-white text-white border-[1px] font-[600] p-[10px] m-[10px] flex items-center justify-between gap-[20px] rounded-[6px] cursor-pointer"
           >
             {/* number */}
 
@@ -82,7 +82,7 @@ const Quran = () => {
                   <h2 className="text-[22px] font-[800] group-hover:text-primary">
                     {surah.englishName}
                   </h2>
-                  <h2 className=" text-stone-600 text-[16px] xl:text-[18px]">
+                  <h2 className=" text-white-600 text-[16px] xl:text-[18px]">
                     {surah.englishNameTranslation}
                   </h2>
                 </div>

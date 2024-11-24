@@ -51,7 +51,7 @@ const Radio = () => {
             key={radio.id}
             to={radio.url}
             target="_blank"
-            className="group hover:border-primary border-solid border-secondary text-secondary border-[1px] font-[600] p-[10px] m-[10px] flex items-center justify-between gap-[20px] rounded-[6px] cursor-pointer"
+            className="group hover:border-primary border-solid border-white text-white border-[1px] font-[600] p-[10px] m-[10px] flex items-center justify-between gap-[20px] rounded-[6px] cursor-pointer"
           >
             {/* number */}
             <p className="flex items-center justify-center  w-[50px] h-[50px] rounded-[6px] group-hover:bg-primary group-hover:text-white rotate-45">

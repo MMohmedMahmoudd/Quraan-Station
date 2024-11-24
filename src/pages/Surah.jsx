@@ -80,7 +80,7 @@ const Surah = () => {
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-screen mx-auto">
-        <PuffLoader color="#38bdf8" size={100} speedMultiplier={3} />
+        <PuffLoader color="#ffff" size={100} speedMultiplier={3} />
       </div>
     );
   }
